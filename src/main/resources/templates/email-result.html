@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả Gửi Email</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h1 class="text-center text-primary mb-4">Kết Quả Gửi Email</h1>
+        <div class="alert alert-success text-center" th:if="${message != null}">
+            <span th:text="${message}"></span>
+        </div>
+        <div class="alert alert-danger text-center" th:if="${errorMessage != null}">
+            <span th:text="${errorMessage}"></span>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/job/" class="btn btn-secondary btn-lg">
+                <i class="fas fa-arrow-left"></i> Quay lại Trang Chủ
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

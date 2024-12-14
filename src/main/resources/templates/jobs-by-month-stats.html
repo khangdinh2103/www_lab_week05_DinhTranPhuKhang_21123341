@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống Kê Công Việc Theo Tháng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container my-5">
+    <h1 class="text-center mb-4">📆 Thống Kê Công Việc Theo Tháng</h1>
+    <p class="text-center text-muted">Số lượng công việc được đăng trong từng tháng</p>
+    <div class="card shadow-sm p-4">
+        <canvas id="jobsChart"></canvas>
+    </div>
+</div>
+
+<script>
+    const months = [1,2,3,4,5,6,7,8,9,10,11, 12];
+    const jobCounts = [23,6,7,8,12,23,56,78,12,33, 12,45];
+
+    const ctx = document.getElementById('jobsChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: months,
+            datasets: [{
+                label: 'Số lượng công việc',
+                data: jobCounts,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderWidth: 2,
+                tension: 0.4 // Để tạo hiệu ứng đường cong
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Số Lượng Công Việc Theo Tháng'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Tháng'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Số Lượng Công Việc'
+                    }
+                }
+            }
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

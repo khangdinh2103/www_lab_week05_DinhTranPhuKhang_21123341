@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập ID Ứng Viên</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            padding-top: 70px;
+            padding-bottom: 50px;
+        }
+        .navbar {
+            background-color: #20c997;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa !important;
+            background-color: #198754;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #20c997;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #20c997;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border: 2px solid #20c997;
+        }
+        .btn-primary {
+            background-color: #20c997;
+            border-color: #20c997;
+        }
+        .btn-primary:hover {
+            background-color: #198754;
+            border-color: #146c43;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Tìm kiếm ứng viên</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Trang Chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/job/jobs">Việc Làm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/candidates/all">Ứng Viên</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Liên Hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Nhập ID Ứng Viên</h1>
+    <div class="form-container mx-auto" style="max-width: 500px;">
+        <!-- Form nhập ID ứng viên -->
+        <form id="candidateForm" method="POST">
+            <div class="mb-3">
+                <label for="candidateId" class="form-label">Nhập ID Ứng Viên:</label>
+                <input type="number" id="candidateId" name="candidateId" class="form-control" placeholder="Nhập ID ứng viên" required>
+            </div>
+            <div class="d-flex justify-content-between">
+                <!-- Nút Gợi Ý Công Việc -->
+                <button type="submit" name="action" value="suggestJob" class="btn btn-primary">Gợi Ý Công Việc</button>
+                <!-- Nút Gợi Ý Kỹ Năng Cần Học -->
+                <button type="submit" name="action" value="suggestSkills" class="btn btn-secondary">Gợi Ý Kỹ Năng</button>
+            </div>
+        </form>
+        <div class="text-center mt-3">
+            <a href="/job/jobs" class="btn btn-link">Quay lại danh sách công việc</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Job Finder. All Rights Reserved.</p>
+</div>
+
+<script>
+    // Cập nhật action của form khi người dùng nhấn vào nút
+    document.querySelector("button[name='action'][value='suggestJob']").addEventListener("click", function (event) {
+        document.getElementById("candidateForm").action = "/job/suggest";
+    });
+
+    document.querySelector("button[name='action'][value='suggestSkills']").addEventListener("click", function (event) {
+        document.getElementById("candidateForm").action = "/job/candidate/skills";
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
