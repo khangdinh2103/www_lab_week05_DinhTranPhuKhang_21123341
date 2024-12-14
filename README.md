@@ -4,40 +4,40 @@
 
 ### 1. Trang đăng nhập
 
-![](images/dangnhap.png)
+![](Images/dangnhap.png)
 ### 2. Trang đăng ký
-![](images/dangky.png)
+![](Images/dangky.png)
 ### 3. Giao diện chính
-![](images/home.png)
+![](Images/home.png)
 ### 4. Giao diện ứng viên
 Khi ấn nút “Đi đến ứng viên” ở Giao diện chính sẽ chuyển đến trang nhập ID ứng viên.
 
-![](images/giaodienungvien.png)
+![](Images/giaodienungvien.png)
 
 ### 5. Trang gợi ý công việc cho ứng viên
 
 Khi ấn vào nút “Gợi ý công việc” ở màn hình Giao diện ứng viên, hệ thống sẽ tự động gợi ý các công việc phù hợp với các kỹ năng mà ứng viên đã có. Hệ thống sử dụng thông tin từ ứng viên và công việc để đưa ra các gợi ý chính xác.
 
-![](images/goiycongviec.png)
+![](Images/goiycongviec.png)
 
 #### 5.1 Gửi Email Gợi Ý
 
 Khi ấn vào nút “Gửi Email Gợi Ý”, mail sẽ được gửi về cho ứng viên.
 
-![](images/guiemail.png)
+![](Images/guiemail.png)
 
-![](images/guiemail2.png)
+![](Images/guiemail2.png)
 
 #### 5.2 Xem chi tiết công việc
 
 Khi ấn vào nút “Xem chi tiết” ở các công việc đề xuất, hệ thống sẽ hiển thị thông tin chi tiết của công việc đó.
 
-![](images/chitietcongviec.png)
+![](Images/chitietcongviec.png)
 
 ### 6. Trang gợi ý kỹ năng cần học cho ứng viên
 Khi nhập ID ứng viên và ấn nút “Gợi ý kỹ năng”, hệ thống sẽ chuyển đến trang gợi ý kỹ năng cần học cho ứng viên dựa trên các kỹ năng mà ứng viên chưa học nhưng các công ty yêu cầu.
 
-![](images/goiykynang.png)
+![](Images/goiykynang.png)
 
 
 ### 7. Giao diện quản lý công ty
